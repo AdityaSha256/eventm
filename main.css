@@ -1,0 +1,71 @@
+* {
+font-family: 'Dosis', sans-serif;
+}
+.table, .table tr, .table td {
+border:1px solid #000;
+border-collapse:collapse;
+}
+body{
+background:#333333;
+}
+input[type=submit] {
+border:1px solid #000;
+background:none;
+}
+.login {
+border-radius:5px;
+margin-top:20px;
+padding:15px;
+}
+.logo {
+background:url(images/logo.png);
+width:403px;
+height:127px;
+background-repeat:no-repeat;
+}
+.left {
+width:185px;
+height:400px;
+float:left;
+}
+.footer {
+width:700px;
+height:40px;
+margin-top:130px;
+}
+.content {
+width:900px;
+padding:15px;
+height:auto;
+}
+a{text-decoration:none; color:#000;}
+a:hover{text-decoration:none; color:#000;}
+.left-nav:hover, .right-nav:hover{ background:#CCCCCC; }
+.left-nav, .right-nav{
+border-bottom:1px solid #000;
+border-radius:3px;
+width:100%;
+padding-top:5px;
+padding-bottom:5px;
+height:auto;
+}
+.left, .right, .logobox, .footer, .content {
+border-radius:10px;
+background:#FFF;
+border:1px solid #000;
+}
+.right {
+width:185px;
+height:400px;
+float:right;
+}
+
+/* Chatroom */
+
+#chatbox{background:#666666;width:820px;height:500px;padding:20px;color:#000;}
+#mainchat{background:#FFFFFF;width:610px;height:92%;float:left;overflow-y:scroll;overflow-x:hidden;word-wrap:break-word;}
+#userlist{background:#CCCCCC;width:190px;height:92%;margin-left:20px;float:right;}
+#postbox{background:#CCCCCC;width:100%;height:40px;float:left;margin-top:10px;text-align:left;}
+#postbox input {margin-left:10px;margin-top:8px;}
+#chat{border-bottom:1px solid #00CCFF;text-align:left;box-sizing:border-box;}
+#user:hover{background:#666666;}
