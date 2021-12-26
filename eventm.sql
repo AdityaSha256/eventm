@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2021 at 08:55 PM
+-- Generation Time: Dec 26, 2021 at 09:45 PM
 -- Server version: 5.7.17
 -- PHP Version: 7.1.3
 
@@ -88,7 +88,6 @@ CREATE TABLE `users` (
   `password` varchar(300) NOT NULL,
   `lname` varchar(90) NOT NULL,
   `fname` varchar(90) NOT NULL,
-  `age` int(11) NOT NULL,
   `gender` varchar(450) NOT NULL,
   `dob` int(11) NOT NULL,
   `city` varchar(90) NOT NULL DEFAULT 'Jaipur',

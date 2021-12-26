@@ -14,15 +14,14 @@ if ($r['id']==NULL) { echo 'This user doesn\'t exist.'; } else {
 <?php
 echo '
 <tr><th colspan="100%">'.$r['username'].'\'s Profile</th></tr>
-<tr><td colspan="100%" align="center"><img src="'.$r['avatar'].'" width="125" height="125" /></td></tr>
 <tr><td>ID</td><td>#'.$r['id'].'</td></tr>
-<tr><td>Rank</td><td>'.$r['rank'].'</td></tr>
-<tr><td>Coins</td><td>$'.$r['coins'].'</td></tr>
-<tr><td>Last Seen</td><td>'.lastseen($r['lastseen']).'</td></tr>
-<tr><td colspan="100%">Signature:<br /><br />'.nl2br($r['signature']).'</td></tr>
-<tr><td colspan="100%" align="center"><a href="battle.php?id='.$r['id'].'&battle=trainer">Battle '.$r['username'].'</a></td></tr>
-<tr><td colspan="100%" align="center"><a href="pm.php?id='.$r['username'].'">Message '.$r['username'].'</a></td></tr>
-<tr><td colspan="100%" align="center"><a href="trade.php?id='.$r['id'].'">Trade '.$r['username'].'</a></td></tr>
+<tr><td>Full Name</td><td>'.$r['fname'].' '.$r['lname'].'</td></tr>
+<tr><td>Gender</td><td>'.$r['gender'].'</td></tr>
+<tr><td>Date of Birth</td><td>'.date('d-m-Y',$r['dob']).'</td></tr>
+<tr><td>City</td><td>'.$r['city'].'</td></tr>
+<tr><td>State</td><td>'.$r['state'].'</td></tr>
+<tr><td>Phone Number</td><td>'.$r['phone'].'</td></tr>
+<tr><td>E-mail Address</td><td>'.$r['email'].'</td></tr>
 ';
 }
 ?>

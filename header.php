@@ -36,15 +36,14 @@ echo '
 else:
 echo '
 <div class="left">
-<a href="news.php"><div class="left-nav">News</div></a>
+<a href="eventlist.php"><div class="left-nav">Event List</div></a>
 <a href="profile.php?id='.$_SESSION['id'].'"><div class="left-nav">Your Profile</div></a>
-<a href="edit.php"><div class="left-nav">Edit Profile</div></a>
 <a href="logout.php"><div class="left-nav">Logout</div></a>
 </div>
 <div class="right">
-<a href="index.php"><div class="right-nav">Home</div></a>
-<a href="login.php"><div class="right-nav">Login</div></a>
-<a href="register.php"><div class="right-nav">Register</div></a>
+<a href="eventlist.php"><div class="right-nav">Event List</div></a>
+<a href="profile.php?id='.$_SESSION['id'].'"><div class="right-nav">Your Profile</div></a>
+<a href="logout.php"><div class="right-nav">Logout</div></a>
 </div>
 ';
 endif;
@@ -56,41 +55,5 @@ try {
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $r) {
     echo 'Sorry! There was an unexpected error! We are not able to connect to the database because of the following reason:<br /><strong>', $r->getMessage() ,'</strong><br /><br /><br />';
-}
-
-//
-// Functions
-//
-
-function changeTime($db, $id) {
-	$time = time();
-	$q = $db->prepare("update users set lastseen=? where id=?");
-	$q->bindParam(1, $time);
-	$q->bindParam(2, $id);
-	$q->execute();
-}
-function lastseen($time) {
-   $periods = array("second", "minute", "hour", "day", "week", "month", "year", "decade");
-   $lengths = array("60","60","24","7","4.35","12","10");
-
-   $now = time();
-
-       $difference     = $now - $time;
-       $tense         = "ago";
-
-   for($j = 0; $difference >= $lengths[$j] && $j < count($lengths)-1; $j++) {
-       $difference /= $lengths[$j];
-   }
-
-   $difference = round($difference);
-
-   if($difference != 1) {
-       $periods[$j].= "s";
-   }
-
-   return "$difference $periods[$j] ago ";
-}
-if (isset($_SESSION['id'])) {
-changeTime($db, $_SESSION['id']);
 }
 ?>

@@ -1,3 +1,8 @@
+@media only screen and (max-width: 1100px) {
+  .left, .right {
+    display:none;
+  }
+}
 * {
 font-family: 'Dosis', sans-serif;
 }
